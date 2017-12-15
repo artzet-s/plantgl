@@ -27,10 +27,9 @@ before_script:
 
 script:
   - source script.sh
+  - conda install --use-local vplants.plantgl
   - conda install nose
-  - ls
   - cd ..
-  - ls -R
   - cd test; nosetests -I test_viewer.py -I test_projpershape.py -I test_geomprinter.py -I thread.py
 
 after_success:
